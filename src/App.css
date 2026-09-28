@@ -1,0 +1,1819 @@
+/* ========================================
+   RESET GLOBAL
+======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  width: 100%;
+  min-width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px 60px;
+
+  background-color: #ffffff;
+
+  /* Aucun trait */
+  border: none;
+
+  /* Très important */
+  margin: 0;
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+  position: relative;
+
+  /* PREND TOUTE LA LARGEUR */
+  width: 100%;
+  min-width: 100%;
+
+  min-height: calc(100vh - 80px);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 80px 8%;
+
+  margin: 0;
+
+  background: #0d0d14;
+
+  overflow: hidden;
+}
+
+
+/* ========================================
+   CONTENU GAUCHE
+======================================== */
+
+.hero-content {
+  width: 48%;
+  max-width: none;
+}
+
+
+/* ========================================
+   INTERFACE DROITE
+======================================== */
+
+.developer-interface {
+  width: 45%;
+  max-width: none;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    width: 100%;
+    padding: 15px 20px;
+  }
+
+  .hero {
+    width: 100%;
+    min-width: 100%;
+
+    flex-direction: column;
+
+    padding: 60px 20px;
+
+    gap: 50px;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .developer-interface {
+    width: 100%;
+  }
+}
+/* ===========================
+   BARRE DE NAVIGATION
+================================ */
+
+.navbar {
+  /* La navbar reste visible en haut quand on descend */
+  position: sticky;
+  top: 0;
+
+  /* Elle passe au-dessus des autres éléments */
+  z-index: 1000;
+
+  /* Organisation horizontale */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* Espacement intérieur */
+  padding: 20px 60px;
+
+  /* Couleur du fond */
+  background-color: #ffffff;
+
+  /* Petite séparation avec le contenu */
+  border-bottom: 1px solid #e5e7eb;
+}
+
+
+/* ================================
+   LOGO
+================================ */
+
+.navbar-logo {
+  /* On enlève le soulignement du lien */
+  text-decoration: none;
+
+  /* Taille du texte */
+  font-size: 22px;
+
+  /* Texte en gras */
+  font-weight: 700;
+
+  /* Couleur */
+  color: #111827;
+}
+
+
+/* ================================
+   MENU
+================================ */
+
+.navbar-menu {
+  /* Affichage horizontal */
+  display: flex;
+
+  /* Espacement entre les liens */
+  gap: 30px;
+
+  /* Supprime les puces de la liste */
+  list-style: none;
+
+  /* Supprime les marges par défaut */
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Liens du menu */
+
+.navbar-menu a {
+  /* Pas de soulignement */
+  text-decoration: none;
+
+  /* Couleur */
+  color: #374151;
+
+  /* Taille */
+  font-size: 15px;
+
+  /* Transition pour l'effet au survol */
+  transition: color 0.2s ease;
+}
+
+
+/* Effet quand la souris passe sur un lien */
+
+.navbar-menu a:hover {
+  color: #2563eb;
+}
+
+
+/* ================================
+   BOUTON THÈME
+================================ */
+
+.theme-button {
+  /* Taille du bouton */
+  width: 40px;
+  height: 40px;
+
+  /* Curseur en forme de main */
+  cursor: pointer;
+
+  /* Fond */
+  background-color: transparent;
+
+  /* Bordure */
+  border: 1px solid #d1d5db;
+
+  /* Taille de l'icône */
+  font-size: 18px;
+
+  /* Pas de coins trop arrondis */
+  border-radius: 6px;
+}
+
+
+/* ================================
+   SECTIONS TEMPORAIRES
+================================ */
+
+.test-section {
+  /* Hauteur pour pouvoir tester les liens */
+  min-height: 80vh;
+
+  /* Centrage du contenu */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* Espacement */
+  padding: 40px 60px;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+/* Sur les petits écrans */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .navbar-menu {
+    gap: 12px;
+  }
+
+  .navbar-menu a {
+    font-size: 13px;
+  }
+
+  .navbar-logo {
+    font-size: 18px;
+  }
+
+  .theme-button {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* =====================================================
+   ACCUEIL
+   ===================================================== */
+
+/* =====================================================
+   ACCUEIL
+   ===================================================== */
+/* =====================================================
+   ACCUEIL
+   ===================================================== */
+
+.hero {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: auto auto;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 60px;
+
+  min-height: 40vh;
+
+  padding: 25px 5%;
+
+  background-color: #09090f;
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   EFFET DE GRILLE EN ARRIÈRE-PLAN
+   ===================================================== */
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    );
+
+  background-size: 50px 50px;
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   PETIT ÉLÉMENT LUMINEUX
+   ===================================================== */
+
+.hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 450px;
+  height: 450px;
+
+  background: rgba(124, 58, 237, 0.12);
+
+  filter: blur(120px);
+
+  top: 10%;
+  right: 10%;
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   CONTENU GAUCHE
+   ===================================================== */
+
+.hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: 620px;
+  max-width: 100%;
+}
+
+
+/* =====================================================
+   PETIT TEXTE
+   ===================================================== */
+
+.hero-intro {
+  margin: 0 0 12px;
+
+  color: #a1a1aa;
+
+  font-size: 14px;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   NOM
+   ===================================================== */
+
+.hero h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 20px;
+
+  line-height: 1;
+
+  letter-spacing: 0;
+
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+
+/* Nom en violet */
+
+.hero h1 span {
+  color: #8b5cf6;
+
+  margin-left: 6px;
+}
+
+
+/* =====================================================
+   MÉTIER
+   ===================================================== */
+
+.hero h2 {
+  margin: 20px 0 18px;
+
+  color: #ffffff;
+
+  font-size: clamp(24px, 3vw, 40px);
+
+  font-weight: 500;
+
+  letter-spacing: 2px;
+
+  line-height: 1.1;
+}
+
+
+/* Mot en violet */
+
+.hero h2 span {
+  color: #8b5cf6;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+   ===================================================== */
+
+.hero-description {
+  width: 560px;
+
+  max-width: 100%;
+
+  margin-bottom: 25px;
+
+  color: #a1a1aa;
+
+  font-size: 16px;
+
+  line-height: 1.6;
+}
+
+
+/* =====================================================
+   BOUTONS
+   ===================================================== */
+
+.hero-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 25px;
+}
+
+
+/* =====================================================
+   BOUTON PRINCIPAL
+   ===================================================== */
+
+.btn-primary {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 12px 22px;
+
+  background: #8b5cf6;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  transition: 0.3s;
+}
+
+
+.btn-primary:hover {
+  background: #a78bfa;
+
+  transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   BOUTON SECONDAIRE
+   ===================================================== */
+
+.btn-secondary {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 12px 22px;
+
+  border: 1px solid #3f3f46;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  transition: 0.3s;
+}
+
+
+.btn-secondary:hover {
+  border-color: #8b5cf6;
+
+  color: #a78bfa;
+
+  transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   TECHNOLOGIES
+   ===================================================== */
+
+.hero-tech {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+
+.hero-tech span {
+  padding: 7px 10px;
+
+  border: 1px solid #27272a;
+
+  color: #71717a;
+
+  font-size: 11px;
+
+  font-family: monospace;
+
+  transition: 0.3s;
+}
+
+
+.hero-tech span:hover {
+  border-color: #8b5cf6;
+
+  color: #a78bfa;
+}
+
+
+/* =====================================================
+   INTERFACE CODE
+   ===================================================== */
+
+.developer-interface {
+  position: relative;
+
+  z-index: 2;
+
+  width: 480px;
+
+  max-width: 100%;
+
+  margin-left: 0;
+
+  border: 1px solid #27272a;
+
+  background: #0d0d14;
+}
+
+
+/* =====================================================
+   BARRE DE L'INTERFACE
+   ===================================================== */
+
+.interface-header {
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 0 15px;
+
+  border-bottom: 1px solid #27272a;
+
+  background: #111118;
+}
+
+
+/* =====================================================
+   LES TROIS PETITS POINTS
+   ===================================================== */
+
+.window-dots {
+  display: flex;
+
+  gap: 7px;
+}
+
+
+.window-dots span {
+  width: 9px;
+
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: #3f3f46;
+}
+
+
+/* =====================================================
+   NOM DU FICHIER
+   ===================================================== */
+
+.file-name {
+  color: #71717a;
+
+  font-family: monospace;
+
+  font-size: 12px;
+}
+
+
+/* =====================================================
+   CODE
+   ===================================================== */
+
+.code-content {
+  padding: 12px;
+
+  min-height: 0;
+
+  font-family: "Courier New", monospace;
+
+  font-size: 12px;
+
+  line-height: 1.55;
+}
+
+
+.code-content p {
+  margin: 0;
+}
+
+
+/* =====================================================
+   NUMÉRO DE LIGNE
+   ===================================================== */
+
+.code-number {
+  display: inline-block;
+
+  width: 28px;
+
+  color: #3f3f46;
+}
+
+
+/* =====================================================
+   COULEURS DU PSEUDO-CODE
+   ===================================================== */
+
+.code-purple {
+  color: #c084fc;
+}
+
+
+.code-blue {
+  color: #60a5fa;
+}
+
+
+.code-key {
+  color: #67e8f9;
+}
+
+
+.code-green {
+  color: #86efac;
+}
+
+
+/* =====================================================
+   INDENTATION
+   ===================================================== */
+
+.code-indent {
+  padding-left: 25px;
+}
+
+
+.code-double-indent {
+  padding-left: 45px;
+}
+
+
+/* =====================================================
+   COMMENTAIRE
+   ===================================================== */
+
+.code-comment {
+  margin-top: 15px !important;
+
+  color: #52525b;
+}
+
+
+/* =====================================================
+   CURSEUR
+   ===================================================== */
+
+.code-cursor {
+  color: #8b5cf6;
+
+  animation: blink 1s infinite;
+}
+
+
+/* =====================================================
+   ANIMATION DU CURSEUR
+   ===================================================== */
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 1000px) {
+
+  .hero {
+    grid-template-columns: 1fr;
+
+    justify-items: center;
+
+    gap: 40px;
+
+    padding: 50px 8%;
+  }
+
+
+  .hero-content {
+    width: 100%;
+
+    text-align: center;
+  }
+
+
+  .hero-description {
+    margin-left: auto;
+
+    margin-right: auto;
+  }
+
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+
+  .hero-tech {
+    justify-content: center;
+  }
+
+
+  .developer-interface {
+    width: 100%;
+
+    max-width: 480px;
+
+    margin: 0 auto;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .hero {
+    padding: 40px 6%;
+
+    gap: 30px;
+  }
+
+
+  .hero h1 {
+    font-size: 18px;
+  }
+
+
+  .hero h2 {
+    font-size: 25px;
+
+    letter-spacing: 1px;
+  }
+
+
+  .hero-description {
+    width: 100%;
+
+    font-size: 14px;
+  }
+
+
+  .hero-actions {
+    flex-wrap: wrap;
+  }
+
+
+  .developer-interface {
+    width: 100%;
+  }
+
+
+  .code-content {
+    padding: 10px;
+
+    font-size: 10px;
+  }
+}
+
+/* =====================================================
+  stats-container
+   ===================================================== */
+
+.stats-container {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+
+  gap: 20px;
+
+  margin-top: 50px;
+}
+
+
+/* ==========================================
+   PETITS CARRÉS
+========================================== */
+
+.stat-card {
+  position: relative;
+
+  width: 220px;
+  height: 220px;
+
+  padding: 22px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e2de;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transition: all 0.3s ease;
+}
+
+
+/* ==========================================
+   HAUT DU CARRÉ
+========================================== */
+
+.stat-top {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.stat-top > span:first-child {
+  font-family: monospace;
+
+  font-size: 11px;
+
+  color: #999999;
+}
+
+
+/* ==========================================
+   PETITE ICÔNE
+========================================== */
+
+.stat-icon {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #deded9;
+
+  font-size: 14px;
+
+  color: #111111;
+}
+
+
+/* ==========================================
+   GRAND CHIFFRE
+========================================== */
+
+.stat-card strong {
+  font-size: 65px;
+
+  line-height: 1;
+
+  font-weight: 500;
+
+  letter-spacing: -4px;
+
+  color: #111111;
+}
+
+
+.stat-card strong span {
+  color: #6f32ff;
+
+  font-size: 28px;
+
+  letter-spacing: 0;
+}
+
+
+/* ==========================================
+   TEXTE
+========================================== */
+
+.stat-info h3 {
+  margin: 0 0 4px;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  color: #111111;
+}
+
+
+.stat-info p {
+  margin: 0;
+
+  font-size: 12px;
+
+  color: #888888;
+}
+
+
+/* ==========================================
+   HOVER
+========================================== */
+
+.stat-card:hover {
+  transform: translateY(-6px);
+
+  border-color: #6f32ff;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+}
+
+
+.stat-card:hover .stat-icon {
+  background: #6f32ff;
+
+  border-color: #6f32ff;
+
+  color: #ffffff;
+}
+
+
+/* ==========================================
+   TABLETTE
+========================================== */
+
+@media (max-width: 1000px) {
+
+  .stats-container {
+    flex-wrap: wrap;
+  }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+  .stats-container {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+  }
+
+
+  .stat-card {
+    width: 100%;
+
+    height: 190px;
+
+    padding: 18px;
+  }
+
+
+  .stat-card strong {
+    font-size: 52px;
+  }
+
+}
+.stats-heading {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 60px 1.3fr 0.7fr;
+
+  gap: 45px;
+
+  align-items: end;
+
+  margin-bottom: 65px;
+}
+
+
+/* ==========================================
+   NUMÉRO
+========================================== */
+
+.heading-number {
+  align-self: start;
+
+  padding-top: 8px;
+
+  font-family: monospace;
+
+  font-size: 12px;
+
+  color: #999999;
+
+  letter-spacing: 1px;
+}
+
+
+/* ==========================================
+   PETIT TITRE
+========================================== */
+
+.heading-content span {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  padding: 7px 12px;
+
+  background: #ece9ff;
+
+  color: #6f32ff;
+
+  font-family: monospace;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+
+/* ==========================================
+   GRAND TITRE
+========================================== */
+
+.heading-content h2 {
+  margin: 0;
+
+  max-width: 700px;
+
+  color: #111111;
+
+  font-size: clamp(38px, 4.5vw, 64px);
+
+  line-height: 1.02;
+
+  font-weight: 500;
+
+  letter-spacing: -3px;
+}
+
+
+/* Mot important */
+
+.heading-content h2 em {
+  color: #6f32ff;
+
+  font-style: normal;
+}
+
+
+/* ==========================================
+   DESCRIPTION
+========================================== */
+
+.heading-description {
+  align-self: end;
+
+  max-width: 390px;
+
+  margin-bottom: 3px;
+}
+
+
+.heading-description p {
+  margin: 0;
+
+  color: #666666;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* ==========================================
+   PETITE LIGNE
+========================================== */
+
+.heading-line {
+  width: 100%;
+
+  height: 1px;
+
+  margin: 25px 0 14px;
+
+  background: #deded9;
+}
+
+
+.heading-line span {
+  display: block;
+
+  width: 55px;
+
+  height: 2px;
+
+  background: #6f32ff;
+}
+
+
+/* ==========================================
+   TEXTE TECHNIQUE
+========================================== */
+
+.heading-description small {
+  font-family: monospace;
+
+  font-size: 9px;
+
+  letter-spacing: 1.5px;
+
+  color: #999999;
+}
+
+
+/* ==========================================
+   TABLETTE
+========================================== */
+
+@media (max-width: 1000px) {
+
+  .stats-heading {
+    grid-template-columns: 45px 1fr;
+
+    gap: 25px;
+  }
+
+  .heading-description {
+    grid-column: 2;
+
+    max-width: 600px;
+
+    margin-top: 25px;
+  }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+  .stats-heading {
+    display: block;
+
+    margin-bottom: 45px;
+  }
+
+
+  .heading-number {
+    margin-bottom: 25px;
+  }
+
+
+  .heading-content span {
+    margin-bottom: 15px;
+  }
+
+
+  .heading-content h2 {
+    font-size: 40px;
+
+    letter-spacing: -2px;
+  }
+
+
+  .heading-description {
+    margin-top: 30px;
+  }
+
+}
+/* =====================================================
+   MON EXPERTISE
+   Section claire et moderne
+   ===================================================== */
+
+.expertise-section {
+  position: relative;
+  width: 100%;
+
+  padding: 90px 6%;
+
+  background: #f7f7f9;
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   DÉGRADÉ DÉCORATIF EN HAUT À DROITE
+   ===================================================== */
+
+.expertise-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  right: -180px;
+  top: -120px;
+
+  background: rgba(139, 92, 246, 0.08);
+
+  filter: blur(100px);
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   DÉGRADÉ DÉCORATIF EN BAS À GAUCHE
+   ===================================================== */
+
+.expertise-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 250px;
+  height: 250px;
+
+  left: -130px;
+  bottom: -120px;
+
+  background: rgba(139, 92, 246, 0.05);
+
+  filter: blur(80px);
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   CONTENEUR DU CONTENU
+   ===================================================== */
+
+.expertise-heading,
+.expertise-grid {
+  width: 100%;
+  max-width: 1050px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* =====================================================
+   EN-TÊTE
+   ===================================================== */
+
+.expertise-heading {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 20px;
+
+  margin-bottom: 50px;
+}
+
+
+/* =====================================================
+   NUMÉRO
+   ===================================================== */
+
+.expertise-heading > span {
+  position: relative;
+
+  padding-top: 5px;
+
+  color: #8b5cf6;
+
+  font-family: "Courier New", monospace;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+/* Petite ligne devant le numéro */
+
+.expertise-heading > span::before {
+  content: "";
+
+  position: absolute;
+
+  width: 25px;
+  height: 1px;
+
+  left: -32px;
+  top: 11px;
+
+  background: #8b5cf6;
+}
+
+
+/* =====================================================
+   CONTENU DE L'EN-TÊTE
+   ===================================================== */
+
+.expertise-label {
+  margin: 0 0 8px;
+
+  color: #71717a;
+
+  font-family: "Courier New", monospace;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   GRAND TITRE
+   ===================================================== */
+
+.expertise-heading h2 {
+  margin: 0;
+
+  color: #111118;
+
+  font-size: clamp(32px, 4vw, 52px);
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: -2px;
+}
+
+
+/* Mot violet */
+
+.expertise-heading h2 span {
+  color: #7c3aed;
+}
+
+
+/* =====================================================
+   GRILLE DES EXPERTISES
+   ===================================================== */
+
+.expertise-grid {
+  position: relative;
+
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  border-top: 1px solid #dedee4;
+
+  border-left: 1px solid #dedee4;
+}
+
+
+/* =====================================================
+   BLOC EXPERTISE
+   ===================================================== */
+
+.expertise-item {
+  position: relative;
+
+  display: flex;
+
+  gap: 22px;
+
+  min-height: 230px;
+
+  padding: 30px;
+
+  background: rgba(255, 255, 255, 0.65);
+
+  border-right: 1px solid #dedee4;
+
+  border-bottom: 1px solid #dedee4;
+
+  overflow: hidden;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+/* =====================================================
+   PETIT TRAIT VIOLET
+   ===================================================== */
+
+.expertise-item::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 0;
+  height: 2px;
+
+  background: #8b5cf6;
+
+  transition: width 0.3s ease;
+}
+
+
+/* =====================================================
+   SURVOL
+   ===================================================== */
+
+.expertise-item:hover {
+  background: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+
+.expertise-item:hover::after {
+  width: 100%;
+}
+
+
+/* =====================================================
+   NUMÉRO DE L'EXPERTISE
+   ===================================================== */
+
+.expertise-number {
+  position: relative;
+
+  z-index: 2;
+
+  flex-shrink: 0;
+
+  color: #a1a1aa;
+
+  font-family: "Courier New", monospace;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  transition: color 0.3s ease;
+}
+
+
+.expertise-item:hover .expertise-number {
+  color: #8b5cf6;
+}
+
+
+/* =====================================================
+   CONTENU
+   ===================================================== */
+
+.expertise-content {
+  position: relative;
+
+  z-index: 2;
+
+  flex: 1;
+}
+
+
+/* =====================================================
+   TITRE
+   ===================================================== */
+
+.expertise-content h3 {
+  margin: 0 0 12px;
+
+  color: #111118;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* Petit trait sous le titre */
+
+.expertise-content h3::after {
+  content: "";
+
+  display: block;
+
+  width: 25px;
+  height: 2px;
+
+  margin-top: 8px;
+
+  background: #8b5cf6;
+
+  transition: width 0.3s ease;
+}
+
+
+.expertise-item:hover .expertise-content h3::after {
+  width: 50px;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+   ===================================================== */
+
+.expertise-content > p {
+  max-width: 400px;
+
+  margin: 0 0 20px;
+
+  color: #666670;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   TECHNOLOGIES
+   ===================================================== */
+
+.technology-list {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 6px;
+}
+
+
+/* Technologie */
+
+.technology-list span {
+  padding: 6px 9px;
+
+  border: 1px solid #dedee4;
+
+  background: #f7f7f9;
+
+  color: #55555f;
+
+  font-family: "Courier New", monospace;
+
+  font-size: 9px;
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+
+/* Hover technologie */
+
+.expertise-item:hover .technology-list span {
+  border-color: rgba(139, 92, 246, 0.35);
+
+  color: #6d28d9;
+
+  background: rgba(139, 92, 246, 0.05);
+}
+
+
+/* =====================================================
+   ÉLÉMENT DÉCORATIF
+   ===================================================== */
+
+.expertise-item .expertise-content::before {
+  content: "///";
+
+  position: absolute;
+
+  right: 0;
+  top: -5px;
+
+  color: rgba(124, 58, 237, 0.10);
+
+  font-family: "Courier New", monospace;
+
+  font-size: 18px;
+
+  letter-spacing: 3px;
+}
+
+
+/* =====================================================
+   TABLETTE
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+  .expertise-section {
+    padding: 75px 6%;
+  }
+
+  .expertise-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .expertise-item {
+    min-height: 210px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+  .expertise-section {
+    padding: 65px 20px;
+  }
+
+
+  .expertise-heading {
+    gap: 12px;
+
+    margin-bottom: 35px;
+  }
+
+
+  .expertise-heading > span::before {
+    display: none;
+  }
+
+
+  .expertise-heading h2 {
+    font-size: 32px;
+
+    letter-spacing: -1px;
+  }
+
+
+  .expertise-label {
+    font-size: 9px;
+
+    letter-spacing: 2px;
+  }
+
+
+  .expertise-item {
+    flex-direction: column;
+
+    gap: 12px;
+
+    min-height: auto;
+
+    padding: 25px 20px;
+  }
+
+
+  .expertise-number {
+    font-size: 10px;
+  }
+
+
+  .expertise-content h3 {
+    font-size: 17px;
+  }
+
+
+  .expertise-content > p {
+    font-size: 12px;
+
+    line-height: 1.6;
+  }
+}

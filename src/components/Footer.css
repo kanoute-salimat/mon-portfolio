@@ -1,0 +1,275 @@
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+.footer {
+  position: relative;
+
+  width: 100%;
+
+  padding: 55px 8% 20px;
+
+  background: #09090f;
+
+  color: #ffffff;
+
+  border-top: 1px solid #1f1f29;
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   PETITE LUEUR VIOLETTE
+   ===================================================== */
+
+.footer::before {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  right: -150px;
+  bottom: -180px;
+
+  background: rgba(139, 92, 246, 0.10);
+
+  filter: blur(90px);
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   CONTENEUR
+   ===================================================== */
+
+.footer-container {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 1050px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 1.5fr 1fr 1fr;
+
+  align-items: start;
+
+  gap: 50px;
+
+  padding-bottom: 40px;
+}
+
+
+/* =====================================================
+   IDENTITÉ
+   ===================================================== */
+
+.footer-brand h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 20px;
+
+  font-weight: 600;
+
+  letter-spacing: 0;
+
+  white-space: nowrap;
+}
+
+
+.footer-brand h2 span {
+  color: #8b5cf6;
+
+  margin-left: 5px;
+}
+
+
+.footer-brand p {
+  margin: 10px 0 0;
+
+  color: #71717a;
+
+  font-family: "Courier New", monospace;
+
+  font-size: 11px;
+
+  letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   NAVIGATION
+   ===================================================== */
+
+.footer-nav {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+
+.footer-nav a {
+  width: fit-content;
+
+  color: #a1a1aa;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  transition: 0.3s ease;
+}
+
+
+.footer-nav a:hover {
+  color: #8b5cf6;
+
+  transform: translateX(4px);
+}
+
+
+/* =====================================================
+   RÉSEAUX SOCIAUX
+   ===================================================== */
+
+.footer-socials {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+
+.footer-socials a {
+  width: fit-content;
+
+  color: #a1a1aa;
+
+  text-decoration: none;
+
+  font-family: "Courier New", monospace;
+
+  font-size: 11px;
+
+  transition: 0.3s ease;
+}
+
+
+.footer-socials a:hover {
+  color: #a78bfa;
+
+  transform: translateX(4px);
+}
+
+
+/* =====================================================
+   BAS DU FOOTER
+   ===================================================== */
+
+.footer-bottom {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 1050px;
+
+  margin: 0 auto;
+
+  padding-top: 18px;
+
+  border-top: 1px solid #1f1f29;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  color: #52525b;
+
+  font-family: "Courier New", monospace;
+
+  font-size: 10px;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* =====================================================
+   TABLETTE
+   ===================================================== */
+
+@media (max-width: 800px) {
+
+  .footer {
+    padding: 45px 6% 20px;
+  }
+
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 35px;
+  }
+
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+  .footer {
+    padding: 40px 20px 18px;
+  }
+
+
+  .footer-container {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
+    padding-bottom: 30px;
+  }
+
+
+  .footer-brand {
+    grid-column: auto;
+  }
+
+
+  .footer-brand h2 {
+    font-size: 18px;
+  }
+
+
+  .footer-bottom {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+    line-height: 1.5;
+  }
+}
