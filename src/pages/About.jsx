@@ -24,7 +24,7 @@ function About() {
             <p className="about-label">
               À PROPOS DE MOI
                 <h1>
-              KANOUTER
+               KANOUTE
               <br />
               <span>SALIMATA.</span>
             </h1>
