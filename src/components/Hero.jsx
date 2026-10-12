@@ -43,7 +43,7 @@ function Hero() {
       <div className="developer-interface">
  <div className="hero-tech">
           <span>Laravel</span>
-          <span>React</span>
+          <span>React.JS</span>
          
           <span>JavaScript</span>
           <span>MySQL</span> 

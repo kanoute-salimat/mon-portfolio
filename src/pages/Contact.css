@@ -1,0 +1,477 @@
+/* ==========================================
+PAGE CONTACT — DESIGN ÉDITORIAL
+========================================== */
+
+.contact-page {
+position: relative;
+min-height: 100vh;
+padding: 65px 5% 80px;
+overflow: hidden;
+background: #f0f0ef;
+color: #171717;
+font-family: inherit;
+}
+
+/* Grand mot en arrière-plan */
+
+.contact-background-title {
+position: absolute;
+top: 5px;
+left: 50%;
+transform: translateX(-50%);
+z-index: 0;
+font-size: clamp(100px, 18vw, 260px);
+line-height: 1;
+font-weight: 900;
+letter-spacing: -0.09em;
+white-space: nowrap;
+color: rgba(20, 20, 20, 0.055);
+pointer-events: none;
+user-select: none;
+}
+
+/* ==========================================
+PANNEAU CENTRAL
+========================================== */
+
+.contact-panel {
+position: relative;
+z-index: 1;
+max-width: 1120px;
+margin: 45px auto 0;
+background: #fff;
+box-shadow: 0 20px 65px rgba(0, 0, 0, 0.09);
+}
+
+/* ==========================================
+PARTIE BLANCHE
+========================================== */
+
+.contact-panel-top {
+position: relative;
+min-height: 510px;
+display: grid;
+grid-template-columns: 1fr 0.85fr;
+gap: 55px;
+align-items: start;
+padding: 75px 9% 80px;
+}
+
+/* Coordonnées */
+
+.contact-information {
+padding-top: 15px;
+}
+
+.contact-eyebrow,
+.contact-footer-label {
+display: block;
+font-size: 10px;
+font-weight: 700;
+letter-spacing: 2px;
+}
+
+.contact-eyebrow {
+color: #777;
+margin-bottom: 22px;
+}
+
+.contact-information h1 {
+margin: 0;
+font-size: clamp(45px, 6vw, 76px);
+line-height: 0.88;
+letter-spacing: -4px;
+font-weight: 850;
+}
+
+.contact-information h1 span {
+color: #8054df;
+}
+
+.contact-description {
+max-width: 370px;
+margin: 27px 0 32px;
+font-size: 13px;
+line-height: 1.8;
+color: #777;
+}
+
+.contact-details {
+display: flex;
+flex-direction: column;
+gap: 19px;
+}
+
+.contact-details a {
+display: flex;
+align-items: center;
+gap: 15px;
+color: #555;
+font-size: 12px;
+text-decoration: none;
+transition: color 0.25s ease;
+}
+
+.contact-details a:hover {
+color: #8054df;
+}
+
+.contact-detail-icon {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-shrink: 0;
+width: 23px;
+height: 23px;
+color: #8054df;
+border: 1px solid #e8defb;
+font-size: 12px;
+font-weight: 700;
+}
+
+/* ==========================================
+FORMULAIRE FLOTTANT
+========================================== */
+
+.contact-form-box {
+position: relative;
+z-index: 2;
+margin-top: 0;
+padding: 30px 28px;
+background: #fff;
+box-shadow: 0 8px 35px rgba(0, 0, 0, 0.10);
+border-top: 3px solid #8054df;
+}
+
+.contact-form-heading {
+margin-bottom: 24px;
+}
+
+.contact-form-number {
+font-size: 9px;
+letter-spacing: 1.5px;
+color: #8054df;
+font-weight: 700;
+}
+
+.contact-form-heading h2 {
+margin: 13px 0 6px;
+font-size: 20px;
+line-height: 1.2;
+letter-spacing: -0.5px;
+}
+
+.contact-form-heading p {
+margin: 0;
+color: #888;
+font-size: 12px;
+}
+
+/* Champs */
+
+.contact-form {
+display: flex;
+flex-direction: column;
+gap: 9px;
+}
+
+.contact-form label {
+margin-top: 8px;
+font-size: 9px;
+font-weight: 700;
+letter-spacing: 1px;
+color: #777;
+}
+
+.contact-form input,
+.contact-form textarea {
+display: block;
+width: 100%;
+min-width: 0;
+padding: 12px;
+border: 1px solid #dedede;
+border-radius: 0;
+background: #fff;
+color: #222;
+font: inherit;
+font-size: 12px;
+outline: none;
+transition: border-color 0.25s ease;
+}
+
+.contact-form input {
+height: 40px;
+}
+
+.contact-form textarea {
+min-height: 100px;
+resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+border-color: #8054df;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+color: #aaa;
+}
+
+/* Bouton */
+
+.contact-submit {
+width: 100%;
+min-height: 43px;
+margin-top: 8px;
+padding: 12px 15px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 12px;
+border: 1px solid #8054df;
+border-radius: 0;
+background: #8054df;
+color: #fff;
+cursor: pointer;
+font: inherit;
+font-size: 10px;
+font-weight: 700;
+letter-spacing: 1px;
+transition: background 0.25s ease;
+}
+
+.contact-submit:hover {
+background: #6740c0;
+}
+
+.contact-submit-arrow {
+font-size: 19px;
+}
+
+.contact-form-note {
+margin: 5px 0 0;
+color: #999;
+font-size: 10px;
+line-height: 1.6;
+}
+
+/* ==========================================
+BANDE VIOLETTE
+========================================== */
+
+.contact-panel-footer {
+position: relative;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 45px 65px;
+padding: 70px 9% 25px;
+background: #8054df;
+color: #fff;
+}
+
+.contact-footer-label {
+color: rgba(255, 255, 255, 0.7);
+font-size: 9px;
+}
+
+.contact-footer-brand h2 {
+margin: 17px 0;
+font-size: 30px;
+line-height: 1.05;
+letter-spacing: -1px;
+}
+
+.contact-footer-brand h2 span {
+color: #ded0ff;
+}
+
+.contact-footer-brand > p:last-child,
+.contact-footer-about > p {
+max-width: 330px;
+margin: 0;
+color: rgba(255, 255, 255, 0.82);
+font-size: 11px;
+line-height: 1.8;
+}
+
+.contact-footer-about {
+padding-top: 3px;
+}
+
+.contact-footer-about > p {
+margin-top: 18px;
+}
+
+.contact-footer-socials {
+display: flex;
+gap: 10px;
+margin-top: 22px;
+}
+
+.contact-footer-socials a {
+width: 31px;
+height: 31px;
+display: flex;
+justify-content: center;
+align-items: center;
+border: 1px solid rgba(255, 255, 255, 0.45);
+color: #fff;
+font-size: 10px;
+font-weight: 700;
+text-decoration: none;
+transition: background 0.25s ease, color 0.25s ease;
+}
+
+.contact-footer-socials a:hover {
+background: #fff;
+color: #8054df;
+}
+
+.contact-footer-status {
+align-self: end;
+font-size: 9px;
+font-weight: 700;
+letter-spacing: 1px;
+}
+
+.contact-online-dot {
+display: inline-block;
+width: 7px;
+height: 7px;
+margin-right: 9px;
+border-radius: 50%;
+background: #b9ffcb;
+}
+
+.contact-footer-status p {
+margin: 12px 0 0 16px;
+color: rgba(255, 255, 255, 0.75);
+font-size: 9px;
+font-weight: 400;
+}
+
+.contact-footer-bottom {
+grid-column: 1 / -1;
+display: flex;
+justify-content: space-between;
+gap: 20px;
+padding-top: 22px;
+border-top: 1px solid rgba(255, 255, 255, 0.25);
+color: rgba(255, 255, 255, 0.7);
+font-size: 8px;
+letter-spacing: 1px;
+}
+
+/* ==========================================
+RESPONSIVE — TABLETTE
+========================================== */
+
+@media (max-width: 850px) {
+.contact-page {
+padding: 50px 4% 60px;
+}
+
+.contact-panel {
+margin-top: 55px;
+}
+
+.contact-panel-top {
+grid-template-columns: 1fr 0.95fr;
+gap: 30px;
+padding: 55px 6% 65px;
+}
+
+.contact-information h1 {
+font-size: 57px;
+}
+
+.contact-form-box {
+padding: 25px 20px;
+}
+
+.contact-panel-footer {
+padding-right: 6%;
+padding-left: 6%;
+gap: 35px;
+}
+}
+
+/* ==========================================
+RESPONSIVE — TÉLÉPHONE
+========================================== */
+
+@media (max-width: 620px) {
+.contact-page {
+padding: 35px 5% 45px;
+}
+
+.contact-background-title {
+top: 12px;
+font-size: 25vw;
+}
+
+.contact-panel {
+margin-top: 45px;
+}
+
+.contact-panel-top {
+grid-template-columns: 1fr;
+gap: 40px;
+padding: 38px 7% 50px;
+}
+
+.contact-information {
+padding-top: 5px;
+}
+
+.contact-information h1 {
+font-size: clamp(52px, 14vw, 75px);
+letter-spacing: -3px;
+}
+
+.contact-description {
+margin-top: 22px;
+}
+
+.contact-details {
+gap: 17px;
+}
+
+.contact-form-box {
+padding: 25px 20px;
+box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.contact-panel-footer {
+grid-template-columns: 1fr;
+gap: 32px;
+padding: 45px 7% 22px;
+}
+
+.contact-footer-brand h2 {
+font-size: 28px;
+}
+
+.contact-footer-status {
+align-self: start;
+line-height: 1.8;
+}
+
+.contact-footer-bottom {
+grid-column: auto;
+flex-direction: column;
+gap: 10px;
+font-size: 8px;
+}
+}
+
+@media (prefers-reduced-motion: reduce) {
+.contact-details a,
+.contact-form input,
+.contact-form textarea,
+.contact-submit,
+.contact-footer-socials a {
+transition: none;
+}
+}

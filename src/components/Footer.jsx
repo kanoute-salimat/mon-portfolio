@@ -19,12 +19,7 @@ function Footer() {
 
 
         {/* Navigation */}
-        <nav className="footer-nav">
-          <a href="#accueil">Accueil</a>
-          <a href="#expertise">Expertise</a>
-          <a href="#projets">Projets</a>
-          <a href="#contact">Contact</a>
-        </nav>
+    
 
 
         {/* Réseaux */}

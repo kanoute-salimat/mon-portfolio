@@ -74,7 +74,7 @@ function Stats() {
 
           <div className="stat-main">
             <strong>
-              02<span>+</span>
+              03<span>+</span>
             </strong>
           </div>
 
@@ -106,7 +106,7 @@ function Stats() {
 
           <div className="stat-main">
             <strong>
-              03<span>+</span>
+              04<span>+</span>
             </strong>
           </div>
 

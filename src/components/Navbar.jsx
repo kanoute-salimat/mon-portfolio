@@ -9,10 +9,15 @@ function Navbar() {
     <nav className="navbar">
 
       {/* Logo / Nom du développeur */}
-      <a href="#accueil" className="navbar-logo">
-        SALIK
-      </a>
+     <a href="/" className="navbar-logo">
+  <span className="logo-illustration">
+    <span className="logo-screen">
+      &lt;/&gt;
+    </span>
+  </span>
 
+  
+</a>
       {/* Menu de navigation */}
       <ul className="navbar-menu">
 
@@ -25,25 +30,18 @@ function Navbar() {
 </Link>
 
         {/* Lien vers la section Compétences */}
-        <li>
-          <a href="#competences">Compétences</a>
-        </li>
+       
 
         {/* Lien vers la section Projets */}
-        <li>
-          <a href="#projets">Projets</a>
-        </li>
+      <Link to="/projets">
+  PROJETS
+</Link>
 
         {/* Lien vers la section Expérience */}
-        <li>
-          <a href="#experience">Expérience</a>
-        </li>
+       <Link to="/experience">EXPÉRIENCE</Link>
 
         {/* Lien vers la section Contact */}
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
-
+        <Link to="/contact">CONTACT</Link>
       </ul>
 
       {/* Bouton qui servira plus tard à changer le thème */}
