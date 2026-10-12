@@ -1,275 +1,508 @@
 /* =====================================================
-   FOOTER
-   ===================================================== */
+FOOTER — PORTFOLIO KANOUTE SALIMATA
+===================================================== */
 
 .footer {
-  position: relative;
-
-  width: 100%;
-
-  padding: 55px 8% 20px;
-
-  background: #09090f;
-
-  color: #ffffff;
-
-  border-top: 1px solid #1f1f29;
-
-  overflow: hidden;
+position: relative;
+isolation: isolate;
+width: 100%;
+padding: 55px 7% 22px;
+background: #09090f;
+color: #ffffff;
+border-top: 1px solid #242430;
+overflow: hidden;
+box-sizing: border-box;
 }
 
+.footer *,
+.footer *::before,
+.footer *::after {
+box-sizing: border-box;
+}
 
 /* =====================================================
-   PETITE LUEUR VIOLETTE
-   ===================================================== */
+LUEUR VIOLETTE
+===================================================== */
 
 .footer::before {
-  content: "";
-
-  position: absolute;
-
-  width: 300px;
-  height: 300px;
-
-  right: -150px;
-  bottom: -180px;
-
-  background: rgba(139, 92, 246, 0.10);
-
-  filter: blur(90px);
-
-  pointer-events: none;
+content: "";
+position: absolute;
+z-index: -1;
+width: 260px;
+height: 260px;
+right: -130px;
+bottom: -170px;
+background: rgba(139, 92, 246, 0.12);
+filter: blur(75px);
+border-radius: 50%;
+pointer-events: none;
 }
 
-
 /* =====================================================
-   CONTENEUR
-   ===================================================== */
+CONTENEUR PRINCIPAL
+===================================================== */
 
 .footer-container {
-  position: relative;
+position: relative;
+z-index: 1;
 
-  z-index: 2;
+width: 100%;
+max-width: 1150px;
+margin: 0 auto;
 
-  max-width: 1050px;
+display: grid;
+grid-template-columns:
+minmax(0, 1.5fr)
+minmax(130px, 0.7fr)
+minmax(170px, 0.8fr);
 
-  margin: 0 auto;
+align-items: start;
+justify-content: space-between;
+column-gap: clamp(30px, 5vw, 75px);
 
-  display: grid;
-
-  grid-template-columns: 1.5fr 1fr 1fr;
-
-  align-items: start;
-
-  gap: 50px;
-
-  padding-bottom: 40px;
+padding-bottom: 45px;
 }
-
 
 /* =====================================================
-   IDENTITÉ
-   ===================================================== */
+IDENTITÉ — COLONNE GAUCHE
+===================================================== */
 
-.footer-brand h2 {
-  margin: 0;
-
-  color: #ffffff;
-
-  font-size: 20px;
-
-  font-weight: 600;
-
-  letter-spacing: 0;
-
-  white-space: nowrap;
+.footer-brand {
+grid-column: 1;
+justify-self: start;
+width: 100%;
+max-width: 390px;
+min-width: 0;
+text-align: left;
 }
 
+.footer-logo {
+display: inline-block;
+max-width: 100%;
+margin: 0;
 
-.footer-brand h2 span {
-  color: #8b5cf6;
+color: #ffffff;
+font-size: clamp(18px, 1.8vw, 21px);
+font-weight: 700;
+letter-spacing: -0.7px;
 
-  margin-left: 5px;
+text-decoration: none;
+overflow-wrap: anywhere;
+transition: color 0.25s ease;
 }
 
-
-.footer-brand p {
-  margin: 10px 0 0;
-
-  color: #71717a;
-
-  font-family: "Courier New", monospace;
-
-  font-size: 11px;
-
-  letter-spacing: 1px;
+.footer-logo span {
+margin-left: 4px;
+color: #8b5cf6;
 }
 
+.footer-logo:hover {
+color: #e4ddff;
+}
+
+/* Métier */
+
+.footer-role {
+margin: 12px 0 0;
+color: #a78bfa;
+
+font-family: "Courier New", monospace;
+font-size: 12px;
+letter-spacing: 0.5px;
+}
+
+/* Description */
+
+.footer-description {
+max-width: 340px;
+margin: 20px 0;
+
+color: #92929f;
+font-size: 13px;
+line-height: 1.9;
+text-align: left;
+}
+
+/* Disponibilité */
+
+.footer-availability {
+display: flex;
+align-items: flex-start;
+justify-content: flex-start;
+gap: 9px;
+
+color: #b4b4c0;
+font-size: 11px;
+line-height: 1.8;
+}
+
+.availability-dot {
+flex: 0 0 7px;
+width: 7px;
+height: 7px;
+margin-top: 5px;
+
+background: #8b5cf6;
+border-radius: 50%;
+box-shadow: 0 0 9px rgba(139, 92, 246, 0.4);
+}
 
 /* =====================================================
-   NAVIGATION
-   ===================================================== */
+COLONNES CENTRALE ET DROITE
+===================================================== */
+
+.footer-column {
+width: 100%;
+min-width: 0;
+justify-self: start;
+text-align: left;
+}
+
+.footer-column h3 {
+margin: 3px 0 24px;
+
+color: #ffffff;
+font-size: 12px;
+font-weight: 600;
+letter-spacing: 0.3px;
+text-align: left;
+}
+
+/* =====================================================
+NAVIGATION
+===================================================== */
 
 .footer-nav {
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 10px;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 15px;
 }
-
 
 .footer-nav a {
-  width: fit-content;
+display: inline-block;
+max-width: 100%;
 
-  color: #a1a1aa;
+color: #a1a1aa;
+font-size: 12px;
+line-height: 1.6;
+text-decoration: none;
 
-  text-decoration: none;
-
-  font-size: 12px;
-
-  transition: 0.3s ease;
+transition:
+color 0.25s ease,
+transform 0.25s ease;
 }
-
 
 .footer-nav a:hover {
-  color: #8b5cf6;
-
-  transform: translateX(4px);
+color: #a78bfa;
+transform: translateX(4px);
 }
 
-
 /* =====================================================
-   RÉSEAUX SOCIAUX
-   ===================================================== */
+RÉSEAUX SOCIAUX
+===================================================== */
 
 .footer-socials {
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 10px;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 15px;
 }
-
 
 .footer-socials a {
-  width: fit-content;
+display: inline-flex;
+align-items: center;
+gap: 8px;
+max-width: 100%;
 
-  color: #a1a1aa;
+color: #a1a1aa;
+font-size: 12px;
+line-height: 1.6;
+text-decoration: none;
+overflow-wrap: anywhere;
 
-  text-decoration: none;
-
-  font-family: "Courier New", monospace;
-
-  font-size: 11px;
-
-  transition: 0.3s ease;
+transition:
+color 0.25s ease,
+transform 0.25s ease;
 }
 
+.footer-socials a span {
+color: #8b5cf6;
+transition: transform 0.25s ease;
+}
 
 .footer-socials a:hover {
-  color: #a78bfa;
-
-  transform: translateX(4px);
+color: #c4b5fd;
+transform: translateX(4px);
 }
 
+.footer-socials a:hover span {
+transform: translate(2px, -2px);
+}
 
 /* =====================================================
-   BAS DU FOOTER
-   ===================================================== */
+LIEN DE CONTACT
+===================================================== */
+
+.footer-contact-link {
+display: inline-flex;
+align-items: center;
+gap: 10px;
+
+max-width: 100%;
+margin-top: 25px;
+padding-bottom: 7px;
+
+border-bottom: 1px solid #6d45ca;
+color: #c4b5fd;
+
+font-size: 12px;
+line-height: 1.7;
+text-decoration: none;
+
+transition:
+color 0.25s ease,
+border-color 0.25s ease;
+}
+
+.footer-contact-link span {
+font-size: 16px;
+transition: transform 0.25s ease;
+}
+
+.footer-contact-link:hover {
+color: #ffffff;
+border-color: #a78bfa;
+}
+
+.footer-contact-link:hover span {
+transform: translateX(4px);
+}
+
+/* =====================================================
+LIGNE DU BAS
+===================================================== */
 
 .footer-bottom {
-  position: relative;
+position: relative;
+z-index: 1;
 
-  z-index: 2;
+width: 100%;
+max-width: 1150px;
+margin: 0 auto;
+padding-top: 20px;
 
-  max-width: 1050px;
+border-top: 1px solid #242430;
 
-  margin: 0 auto;
-
-  padding-top: 18px;
-
-  border-top: 1px solid #1f1f29;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: space-between;
-
-  gap: 20px;
-
-  color: #52525b;
-
-  font-family: "Courier New", monospace;
-
-  font-size: 10px;
-
-  letter-spacing: 0.5px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+flex-wrap: wrap;
+gap: 12px 24px;
 }
 
+.footer-bottom p {
+margin: 0;
+color: #737381;
 
-/* =====================================================
-   TABLETTE
-   ===================================================== */
-
-@media (max-width: 800px) {
-
-  .footer {
-    padding: 45px 6% 20px;
-  }
-
-
-  .footer-container {
-    grid-template-columns: 1fr 1fr;
-
-    gap: 35px;
-  }
-
-
-  .footer-brand {
-    grid-column: 1 / -1;
-  }
+font-family: "Courier New", monospace;
+font-size: 10px;
+line-height: 1.8;
 }
 
+.footer-built span {
+color: #a78bfa;
+}
 
 /* =====================================================
-   MOBILE
-   ===================================================== */
+RETOUR EN HAUT
+===================================================== */
 
-@media (max-width: 600px) {
+.back-to-top {
+display: inline-block;
 
-  .footer {
-    padding: 40px 20px 18px;
-  }
+color: #a1a1aa;
+font-size: 11px;
+line-height: 1.8;
+text-decoration: none;
 
+transition: color 0.25s ease;
+}
 
-  .footer-container {
-    grid-template-columns: 1fr;
+.back-to-top:hover {
+color: #a78bfa;
+}
 
-    gap: 25px;
+/* =====================================================
+TABLETTES
+===================================================== */
 
-    padding-bottom: 30px;
-  }
+@media (max-width: 900px) {
+.footer {
+padding: 45px 5% 22px;
+}
 
+.footer-container {
+grid-template-columns:
+minmax(0, 1.2fr)
+minmax(120px, 0.8fr)
+minmax(140px, 0.8fr);
 
-  .footer-brand {
-    grid-column: auto;
-  }
+```
+column-gap: 25px;
+padding-bottom: 35px;
+```
 
+}
 
-  .footer-brand h2 {
-    font-size: 18px;
-  }
+.footer-description {
+max-width: 300px;
+}
+}
 
+/* =====================================================
+PETITES TABLETTES ET GRANDS TÉLÉPHONES
+===================================================== */
 
-  .footer-bottom {
-    flex-direction: column;
+@media (max-width: 650px) {
+.footer {
+padding: 40px 6% 20px;
+}
 
-    align-items: flex-start;
+.footer-container {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 35px 25px;
+padding-bottom: 32px;
+}
 
-    gap: 8px;
+.footer-brand {
+grid-column: 1 / -1;
+max-width: 100%;
+}
 
-    line-height: 1.5;
-  }
+.footer-description {
+max-width: 420px;
+}
+
+.footer-bottom {
+justify-content: flex-start;
+gap: 10px 20px;
+}
+}
+
+/* =====================================================
+TÉLÉPHONES
+===================================================== */
+
+@media (max-width: 480px) {
+.footer {
+padding: 35px 20px 18px;
+}
+
+.footer-container {
+grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+column-gap: 18px;
+row-gap: 30px;
+}
+
+.footer-brand {
+grid-column: 1 / -1;
+}
+
+.footer-logo {
+font-size: 19px;
+}
+
+.footer-role {
+font-size: 11px;
+}
+
+.footer-description {
+margin: 16px 0;
+font-size: 12px;
+line-height: 1.8;
+}
+
+.footer-availability {
+font-size: 10px;
+}
+
+.footer-column h3 {
+margin-bottom: 18px;
+font-size: 11px;
+}
+
+.footer-nav,
+.footer-socials {
+gap: 13px;
+}
+
+.footer-nav a,
+.footer-socials a {
+font-size: 11px;
+}
+
+.footer-contact-link {
+align-items: flex-start;
+gap: 5px;
+margin-top: 20px;
+font-size: 10px;
+}
+
+.footer-bottom {
+flex-direction: column;
+align-items: flex-start;
+gap: 8px;
+padding-top: 16px;
+}
+
+.footer-bottom p {
+font-size: 9px;
+}
+
+.back-to-top {
+margin-top: 3px;
+font-size: 10px;
+}
+}
+
+/* =====================================================
+TRÈS PETITS ÉCRANS
+===================================================== */
+
+@media (max-width: 350px) {
+.footer {
+padding-right: 15px;
+padding-left: 15px;
+}
+
+.footer-container {
+grid-template-columns: minmax(0, 1fr);
+gap: 28px;
+}
+
+.footer-brand {
+grid-column: auto;
+}
+
+.footer-column {
+width: 100%;
+}
+
+.footer-bottom {
+overflow-wrap: anywhere;
+}
+}
+
+/* =====================================================
+ACCESSIBILITÉ
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+.footer *,
+.footer *::before,
+.footer *::after {
+scroll-behavior: auto !important;
+transition: none !important;
+}
 }
